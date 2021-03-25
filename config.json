@@ -1,0 +1,8 @@
+{
+    "params":
+    {
+        "local_uri":"mysql://root:''@localhost/coders",
+        "gmail-user":"jnhx.16@gmail.com",
+        "gmail-password":"1604@JNHX"
+    }
+}

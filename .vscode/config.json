@@ -1,0 +1,10 @@
+{
+    "params":
+    {
+        "local_server":"mysql://root:""@localhost/coders",
+        "fb_url":"https://facebook.com",
+        "tw_url":"https://twitter.com",
+        "gh_url":"https://github.com"
+        
+    }
+}
