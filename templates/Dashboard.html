@@ -1,0 +1,54 @@
+{% extends "Layout.html" %} {% block content %}
+  <!-- Page Header -->
+
+  <header class="masthead" style="background-image:url('/static/img/home-bg.jpg')">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1>Admin Panel</h1>
+            <h2 class="subheading"></h2>
+            <span class="meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on August 24, 2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+<div class="container">
+
+    <table class="table">
+        <thead class="thead-dark">
+      <tr>
+          <th scope="col">SrNo</th>
+        <th scope="col">Title</th>
+        <th scope="col">Date</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <h2>
+        Upload a file here
+        <a href="/edit/0" <button class="btn btn-outline-dark btn-sm mx-1">Add New Post</button></a>
+      </h2>
+        {% for post in posts %}
+            
+        <tr>
+            <th scope="row">{{post.Srno}}</th>
+            <td>{{post.Title}}</td>
+            <td>{{post.Date}}</td>
+            <td><a href="/edit/{{post.Srno}} "<button class="btn btn-outline-dark btn-sm mx-1">Update</button></a></td>
+                <td><a href="" <button class="btn btn-outline-dark btn-sm mx-1">Delete</button></a></td></tr> 
+        {% endfor %}
+</tbody>
+</table>
+</div>
+
+    <hr>
+{% endblock %}  

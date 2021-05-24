@@ -1,0 +1,99 @@
+{% extends "Layout.html" %} {% block content %}
+<!-- Page Header -->
+
+<header
+  class="masthead"
+  style="background-image: url('/static/img/home-bg.jpg')"
+>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="post-heading">
+          <h1>Admin Panel</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta"
+            >Posted by
+            <a href="#">Start Bootstrap</a>
+            on August 24, 2019</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Post Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-md-10 mx-auto">
+      <h1>Add/Edit a Post</h1>
+      <form
+        name="sentMessage"
+        id="contactForm"
+        action="/edit/{{post.Srno}}"
+        method="POST"
+        novalidate
+      >
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Title</label>
+            <input
+              type="text"
+              class="form-control"
+              name="title"
+              placeholder="Title"
+              id="title"
+              required
+              data-validation-required-message="Please enter your name."
+              value="{{post.Title}}"
+            />
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="form-group col-xs-12 floating-label-form-group controls">
+            <label>Content</label>
+            <textarea
+              rows="5"
+              type="tel"
+              class="form-control"
+              name="content"
+              placeholder="content"
+              id="content"
+              required
+              data-validation-required-message="Please enter your phone number."
+            >
+{{post.Content}}</textarea
+            >
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="form-group floating-label-form-group controls">
+            <label>Slug</label>
+            <input
+              type="text"
+              rows="5"
+              class="form-control"
+              name="slug"
+              placeholder="Slug"
+              id="slug"
+              required
+              data-validation-required-message="Please enter a message."
+              value="{{post.Slug}}"
+            />
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <br />
+        <div id="success"></div>
+        <button type="submit" class="btn btn-primary" id="sendMessageButton">
+          submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
